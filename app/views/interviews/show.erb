@@ -1,0 +1,8 @@
+<h2>Interview</h2>
+<%= @interview.title%>
+</br>
+<%= Employee.find(@interview.interviewer_id).name%>
+</br>
+<%= @interview.date_of_interview%>
+</br>
+<%= @interview.no_of_candidates %>

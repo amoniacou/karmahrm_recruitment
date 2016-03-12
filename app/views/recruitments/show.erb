@@ -1,0 +1,13 @@
+<h3>Show</h3>
+<%= @recruitment.title %>
+</br>
+<%= @recruitment.content %>
+</br>
+<%= @recruitment.start_date %> | <%= @recruitment.end_date %>
+<%= @recruitment.position %>
+<%= @recruitment.no_of_openings %>
+</br>
+<%= link_to "interview",recruitment_interviews_path(@recruitment)%>
+<%= link_to 'Edit', edit_recruitment_path(@recruitment) %>
+|
+<%= link_to 'Back', recruitments_path %>

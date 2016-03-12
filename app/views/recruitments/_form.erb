@@ -1,0 +1,12 @@
+<%= simple_form_for @recruitment do |f| %>
+    <%#= f.select :department_id, options_from_collection_for_select(Department.all, "id", "name")%>
+    <%= f.input :department_id,collection: Department.all %>
+    <%#= f.select :, options_from_collection_for_select(Department.all, "id", "name")%>
+    <%= f.input :title,:placeholder => 'Enter title...' %>
+    <%= f.input :content,:placeholder => 'Enter content...' %>
+    <%= f.input :start_date ,as: :bootstrap_datepicker%>
+    <%= f.input :end_date ,as: :bootstrap_datepicker%>
+    <%= f.input :no_of_openings %>
+    <%= f.input :position,:placeholder => 'Enter possition...' %>
+    <%= f.button :submit %>
+<% end %>

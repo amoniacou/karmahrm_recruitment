@@ -1,0 +1,26 @@
+<h1>Candidate view</h1>
+</br>
+<table class="table table-bordered">
+  <tbody>
+  <tr>
+    <th>Name</th>
+    <th>Dob</th>
+    <th>Qualification</th>
+    <th>Email</th>
+    <th>Mobile</th>
+  </tr>
+  <% @candidates.each do |candidate| %>
+      <tr>
+        <td> <td> <%= link_to candidate.full_name,candidate %></td></td>
+        <td><%= candidate.dob_date%></td>
+        <td><%= candidate.qualification %></td>
+        <td><%= candidate.email %></td>
+        <td><%= candidate.mobile %></td>
+        <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+        <td><%= link_to 'Destroy', candidate, :method => :delete, :data => {:confirm => 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</br>
+<%= link_to 'New candidate', new_candidate_path %>

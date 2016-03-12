@@ -1,0 +1,28 @@
+<h1>Listing recruitments</h1>
+</br>
+<table class="table table-bordered">
+  <tbody>
+  <tr>
+    <th>Title</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Possition</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>distroy</th>
+  </tr>
+  <% @recruitments.each do |recruitment| %>
+      <tr>
+        <td><%= recruitment.title %></td>
+        <td><%= recruitment.start_date %></td>
+        <td><%= recruitment.end_date %></td>
+        <td><%= recruitment.position %></td>
+        <td> <%= link_to 'Show', recruitment %></td>
+        <td><%= link_to 'Edit', edit_recruitment_path(recruitment) %></td>
+        <td><%= link_to 'Destroy', recruitment, :method => :delete, :data => {:confirm => 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</br>
+<%= link_to 'New Recruitment', new_recruitment_path %>

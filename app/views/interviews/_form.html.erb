@@ -1,0 +1,7 @@
+<%= simple_form_for [@recruitment,@interview] do |f| %>
+        <%= f.input  :title, :placeholder => 'Enter titile' %>
+        <%= f.select :interviewer_id, options_from_collection_for_select(@employees.all, "id", "name")%>
+        <%= f.input  :no_of_candidates, :placeholder => 'No of candidates can handle'%>
+        <%= f.input  :date_of_interview %>
+    <%= f.button :submit %>
+<% end %>

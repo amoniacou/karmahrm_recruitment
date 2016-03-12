@@ -1,0 +1,17 @@
+<%= simple_form_for @candidate do |f| %>
+    <%= f.input :recruitment_id, :collections => @recruitments, :label_method => :name, :value_method => :id, :label => "Recruitments", :include_blank => false %>
+    <%= f.fields_for :candidate do |ff| %>
+        <%= ff.input :first_name, :placeholder => 'Enter first name' %>
+        <%= ff.input :last_name, :placeholder => 'Enter last name...' %>
+        <%= ff.input :address, :placeholder => 'Address...' %>
+        <%= ff.input :city, :placeholder => 'City...' %>
+        <%= ff.input :state, :placeholder => 'State...' %>
+        <%= ff.input :pin_code, :placeholder => 'Pin...' %>
+        <%= ff.input :home_phone_number, :placeholder => 'Home Phone ...' %>
+        <%= ff.input :mobile, :placeholder => 'Mobile...' %>
+        <%= ff.input :email, :placeholder => 'Email...' %>
+        <%= ff.input :qualification, :placeholder => 'Qualification...' %>
+        <%= ff.input :dob_date %>
+    <% end %>
+    <%= f.button :submit %>
+<% end %>
