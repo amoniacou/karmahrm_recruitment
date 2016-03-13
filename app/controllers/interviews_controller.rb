@@ -28,7 +28,6 @@ class InterviewsController < ApplicationController
 
   def new
     @recruitment = Recruitment.find(params[:recruitment_id])
-    @employees = Employee.all
     @interview = Interview.new
   end
 

@@ -21,12 +21,12 @@ module SimplehrRecruitment
                             {
                               text: 'New',
                               class: 'fa fa-new',
-                              url: { controller: :posts, action: :new }
+                              url: { controller: :recruitments, action: :new }
                             },
                             {
                               text: 'Index',
                               class: 'fa fa-index',
-                              url: { controller: :posts, action: :index }
+                              url: { controller: :recruitments, action: :index }
                             }
                           ],
                           text: 'Recruitment'
