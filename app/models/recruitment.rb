@@ -21,4 +21,18 @@ class Recruitment < ActiveRecord::Base
   belongs_to :department
   has_many :candidates
   has_many :interviews
+
+
+
+
+
+
+
+
+  # instance methods
+   def get_remain_candidates_count
+    candidate_count = no_of_openings - interviews.sum(:no_of_candidates)
+   end
+
+
 end

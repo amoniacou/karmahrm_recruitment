@@ -27,8 +27,8 @@ class InterviewsController < ApplicationController
   end
 
   def new
-    @recruitment = Recruitment.find(params[:recruitment_id])
-    @interview = Interview.new
+    @interview = @recruitment.interviews.new
+    @employees=Employee.active.includes(:user)
   end
 
   def  create
