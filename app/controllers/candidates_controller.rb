@@ -34,6 +34,7 @@ class CandidatesController < ApplicationController
   def show
   end
 
+# add  candidate
   # GET /candidates/new
   def new
     @candidate = Candidate.new
