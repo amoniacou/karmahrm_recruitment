@@ -1,3 +1,5 @@
+require 'karmahrm_recruitment/engine'
+
 module SimplehrRecruitment
   class Engine < ::Rails::Engine
     if defined?(ActsAsPluggable)
