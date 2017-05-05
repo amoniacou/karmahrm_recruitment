@@ -1,4 +1,4 @@
-require 'karmahrm_recruitment/engine'
+require 'karmahrm_recruitment/version'
 
 module SimplehrRecruitment
   class Engine < ::Rails::Engine
