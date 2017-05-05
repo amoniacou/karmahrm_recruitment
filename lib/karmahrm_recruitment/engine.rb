@@ -2,7 +2,7 @@ module SimplehrRecruitment
   class Engine < ::Rails::Engine
     if defined?(ActsAsPluggable)
       ::ActsAsPluggable::Plugin.register(
-        :simplehr_recruitment,
+        :karmahrm_recruitment,
         :collaboration, engine: self,
                         description: 'Recruitment Plugin',
                         website: 'https://github.com/tachyons/simplehr_discussion',

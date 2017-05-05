@@ -1,4 +1,4 @@
-require "simplehr_recruitment/engine"
+require "karmahrm_recruitment/engine"
 
 module SimplehrRecruitment
 
